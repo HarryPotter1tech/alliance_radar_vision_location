@@ -34,3 +34,7 @@ game_config_parameters:
   game_side:
     enemy: "red"
     ally: "blue"
+  version: "test"
+
+# version could be choosen from test and release
+# test version used video to test the algorithm, release version used real-time data from camera, and the data will be sent to the robot through serial port.

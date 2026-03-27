@@ -6,7 +6,8 @@ namespace YamlConfigs
                    std::shared_ptr<CameraData::CameraInsideParameters> camera_inside_parameters,
                    std::shared_ptr<CameraSpace::CameraPhysicalPose> camera_physical_pose,
                    std::shared_ptr<Game::GameSide> game_side,
-                   std::shared_ptr<Game::GameState> game_state)
+                   std::shared_ptr<Game::GameState> game_state,
+                   std::shared_ptr<Game::version> game_version)
      {
           YAML::Node global_config = YAML::LoadFile("config.yaml");
           std::cout << "loadding config.yaml..." << std::endl;
@@ -92,10 +93,13 @@ namespace YamlConfigs
                std::cout << "Game side loaded successfully." << std::endl;
                game_state->state = game_config_node["game_state"].as<std::string>();
                std::cout << "Game state loaded successfully." << std::endl;
+               game_version->version = game_config_node["version"].as<std::string>();
+               std::cout << "Game version loaded successfully." << std::endl;
+
           }
           else
           {
-               std::cerr << "Failed to load game side/state." << std::endl;
+               std::cerr << "Failed to load game config parameters." << std::endl;
                return false;
 
           }

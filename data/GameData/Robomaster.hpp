@@ -14,6 +14,11 @@ namespace Game
         std::string enemy;
         std::string ally;
     };
+    struct version
+    {
+        std::string version;
+    };
+
 }
 namespace RobotParameters
 {
