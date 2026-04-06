@@ -35,7 +35,7 @@ jobs:
             exit 1
           fi
 
-          FILES=$(git ls-files | grep -E '\.(cpp|c|hpp|h|cc|cxx|hh|hxx)$' | grep -Ev '^(build/|thirty-party-lib/|model/|\.github/|,github/)')
+          FILES=$(git ls-files | grep -E '\.(cpp|c|hpp|h|cc|cxx|hh|hxx)$' | grep -Ev '^(build/|thirty-party-lib/|model/|\.github/|,github/|include/tiny_obj_loader\.h$)')
           if [ -n "$FILES" ]; then
             set -o pipefail
             for f in $FILES; do
