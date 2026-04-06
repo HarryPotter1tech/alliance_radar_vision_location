@@ -1,13 +1,11 @@
 #pragma once
 #include <iostream>
-#include <vector>
 #include <string>
-namespace Data::MapData
-{
-    struct MapConfigParameters
-    {
-        std::string map_name;
-        std::string obj_map_file_path;
-        std::string bin_map_file_path;
-    };
-}
+#include <vector>
+namespace Data::MapData {
+struct MapConfigParameters {
+    std::string map_name;
+    std::string obj_map_file_path;
+    std::string bin_map_file_path;
+};
+} // namespace Data::MapData
