@@ -21,7 +21,7 @@ private:
 
 public:
     explicit Map(std::shared_ptr<const Data::MapData::MapConfigParameters> cfg)
-        : Mapconfig_(cfg) {};
+        : Mapconfig_(cfg){};
     ~Map() = default;
     bool Mapload();
     std::vector<Eigen::Vector3d> Getvector() const;

@@ -13,7 +13,7 @@ private:
 
 public:
     AABB(const std::vector<Eigen::Matrix3d>& trangles_in)
-        : trangles_in(trangles_in) {};
+        : trangles_in(trangles_in){};
     ~AABB() = default;
     bool MIN_AABB_init();
     bool RAY_AABB_intersect();
